@@ -20,3 +20,25 @@ body {
 .title {
   margin: 20px 0px;
 }
+input[type="text"] {
+  width: 200px;
+  height: 20px;
+  border: none;
+}
+form {
+  height: 20px;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+}
+.search{
+    border: none;
+    width: 25px;
+
+}
+.editBtn {
+  font-size: 25px;
+  background: none;
+  color: blue;
+  border: none;
+}
