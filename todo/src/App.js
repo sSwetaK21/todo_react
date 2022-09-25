@@ -8,9 +8,9 @@ import { FaTrashAlt } from "react-icons/fa";
 function App() {
 
 
-
   const [inputData, setInput] = useState('');
-  const [items, setItems] = useState([])
+  const [items, setItems] = useState([]);
+  const [toggle, setToggle] = useState(true)
 
   const addItem = () => {
     if (!inputData) {
@@ -20,11 +20,7 @@ function App() {
       setItems([...items, inputData]);
       setInput('')
     }
-    // setItems([...items, inputData]);
-    //   setInput('')
-    //   if(!inputData){
-    //     alert("plese enetr")
-    //   }
+  
   }
 
   const deleteItem=(id)=>{
@@ -36,6 +32,9 @@ function App() {
     setItems(updateItems)
   }
 
+  const editBtn=()=>{
+
+  }
 
   const removeAll=()=>{
     setItems([])
