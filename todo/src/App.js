@@ -9,8 +9,17 @@ function App() {
 
 
 
-  // const [todo, setTodo] = useState()
+  const [inputData, setInput] = useState('');
+  const [items, setItems] = useState([])
 
+  const addItem = () => {
+    if (!inputData) {
+
+    } else {
+      setItems([...items, inputData]);
+      setInput("")
+    }
+  }
 
 
   return (
@@ -21,22 +30,39 @@ function App() {
 
         <div className="todoBox">
           <form>
-            <input type="text"></input>
-            <button type="submit" className="search">        <FcSearch  />
+            <input type="text" value={inputData} onChange={(e) => setInput(e.target.value)}></input>
+            <button type="submit" className="search" onClick={addItem}>        <FcSearch />
             </button>
           </form>
 
-          <ul className="ulList">
-            <li className="ullink">
-              <span>Exercise</span>
-              <button type="button" className="editBtn">
-                <FaEdit />
-              </button>
-              <button type="button" className="delBtn">
-                <FaTrashAlt/>
-              </button>
-            </li>
-          </ul>
+          <div className="showItem">
+            {
+              items.map(
+                (element, index) => {
+                  return (
+
+                    <div className="addEl" key={index}>
+                      <h3>{element}</h3>
+                      <div className="btns">
+
+
+                        <button type="button" className="editBtn">
+                          <FaEdit />
+                        </button>
+                        <button type="button" className="delBtn">
+                          <FaTrashAlt />
+                        </button>
+                      </div>
+
+
+                    </div>
+                  )
+                }
+              )
+            }
+          </div>
+
+
 
         </div>
 

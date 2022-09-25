@@ -24,6 +24,8 @@ input[type="text"] {
   width: 200px;
   height: 20px;
   border: none;
+  padding: 10px;
+
 }
 form {
   height: 20px;
@@ -37,7 +39,32 @@ form {
 
 }
 .editBtn {
-  font-size: 25px;
+  font-size: 20px;
+  background: none;
+  color: blue;
+  border: none;
+  margin: 0px 10px;
+
+}
+.todoBox {
+  display: flex;
+  align-items: center;
+  /* height: 100vh; */
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+.addEl {
+  width: 166px;
+  display: flex;
+  background: slateblue;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  padding: 5px;
+
+}
+.delBtn {
+  font-size: 20px;
   background: none;
   color: blue;
   border: none;
