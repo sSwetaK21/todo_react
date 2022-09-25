@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './App.css';
-import { FcSearch } from "react-icons/fc";
+import { FaCheck } from "react-icons/fa";
 import { FaEdit } from "react-icons/fa";
 import { FaTrashAlt } from "react-icons/fa";
 
@@ -14,11 +14,28 @@ function App() {
 
   const addItem = () => {
     if (!inputData) {
+      alert("Please enter todo")
 
     } else {
       setItems([...items, inputData]);
-      setInput("")
+      setInput('')
     }
+    // setItems([...items, inputData]);
+    //   setInput('')
+    //   if(!inputData){
+    //     alert("plese enetr")
+    //   }
+  }
+
+  const deleteItem=(id)=>{
+    const updateItems = items.filter(
+      (ele, ind)=>{
+        return ind !== id;
+      }
+
+    )
+
+    setItems(updateItems)
   }
 
 
@@ -29,27 +46,32 @@ function App() {
         </h1>
 
         <div className="todoBox">
-          <form>
-            <input type="text" value={inputData} onChange={(e) => setInput(e.target.value)}></input>
-            <button type="submit" className="search" onClick={addItem}>        <FcSearch />
+        <div className="formDiv">
+
+            <input type="text" value={inputData} onChange={(e) =>
+               setInput(e.target.value)}></input>
+            <button type="submit" className="search" onClick={addItem}>        <FaCheck />
             </button>
-          </form>
+            </div>
+
 
           <div className="showItem">
             {
               items.map(
                 (element, index) => {
                   return (
-
+                    
                     <div className="addEl" key={index}>
                       <h3>{element}</h3>
                       <div className="btns">
-
-
                         <button type="button" className="editBtn">
                           <FaEdit />
                         </button>
-                        <button type="button" className="delBtn">
+                        <button type="button" className="delBtn" onClick={
+                          ()=>{
+                            deleteItem(index)
+                          }
+                        }>
                           <FaTrashAlt />
                         </button>
                       </div>
@@ -62,7 +84,9 @@ function App() {
             }
           </div>
 
-
+            <div className="check">
+              <button className="checktitle">Remove all</button>
+            </div>
 
         </div>
 

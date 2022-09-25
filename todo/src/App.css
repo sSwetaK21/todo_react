@@ -22,15 +22,17 @@ body {
 }
 input[type="text"] {
   width: 200px;
-  height: 20px;
+  height: 25px;
   border: none;
   padding: 10px;
 
 }
-form {
+.formDiv {
   height: 20px;
   /* text-align: center; */
   display: flex;
+  margin: 14px 0px;
+
   justify-content: center;
 }
 .search{
@@ -41,10 +43,19 @@ form {
 .editBtn {
   font-size: 20px;
   background: none;
-  color: blue;
+  color: white;
   border: none;
   margin: 0px 10px;
+  cursor: pointer;
 
+}
+
+.editBtn:hover{
+  color: rgb(233, 155, 120);
+}
+
+.delBtn:hover{
+  color: black;
 }
 .todoBox {
   display: flex;
@@ -54,18 +65,36 @@ form {
   /* justify-content: space-around; */
 }
 .addEl {
-  width: 166px;
-  display: flex;
-  background: slateblue;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0px;
-  padding: 5px;
+  width: 200px;
+    border-radius: 5px;
+    display: flex;
+    background: slateblue;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+    padding: 9px;
 
 }
 .delBtn {
   font-size: 20px;
   background: none;
-  color: blue;
+  color: white;
   border: none;
+  cursor: pointer;
+
+}
+.search {
+  height: 25px;
+  font-size: 21px;
+  color: green;
+  background-color: white;
+}
+
+button.checktitle {
+  background-color: slateblue;
+  padding: 6px 8px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  color: white;
+
 }
