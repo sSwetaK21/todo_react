@@ -32,12 +32,14 @@ function App() {
       (ele, ind)=>{
         return ind !== id;
       }
-
     )
-
     setItems(updateItems)
   }
 
+
+  const removeAll=()=>{
+    setItems([])
+  }
 
   return (
     <div className="App">
@@ -85,7 +87,7 @@ function App() {
           </div>
 
             <div className="check">
-              <button className="checktitle">Remove all</button>
+              <button className="checktitle" onClick={removeAll}>Remove all</button>
             </div>
 
         </div>
