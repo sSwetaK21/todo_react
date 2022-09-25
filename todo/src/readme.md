@@ -1,1 +1,1 @@
-<img scr="./images/img.jpg" alt="output">
+<img scr="../images/img.jpg" alt="output">
