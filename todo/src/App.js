@@ -10,7 +10,7 @@ function App() {
 
   const [inputData, setInput] = useState('');
   const [items, setItems] = useState([]);
-  const [toggle, setToggle] = useState(true)
+  
 
   const addItem = () => {
     if (!inputData) {
@@ -32,9 +32,6 @@ function App() {
     setItems(updateItems)
   }
 
-  const editBtn=()=>{
-
-  }
 
   const removeAll=()=>{
     setItems([])
@@ -51,7 +48,7 @@ function App() {
 
             <input type="text" value={inputData} onChange={(e) =>
                setInput(e.target.value)}></input>
-            <button type="submit" className="search" onClick={addItem}>        <FaCheck />
+            <button type="submit" className="search" onClick={addItem}> <FaCheck />
             </button>
             </div>
 
