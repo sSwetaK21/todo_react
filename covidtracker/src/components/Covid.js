@@ -54,18 +54,20 @@ export function Covid() {
     //     }
     // }
 
-    // let darkbtn = document.querySelector(".darkbtn")
+    let darkbtn = document.querySelector(".darkbtn")
 
    let  darkflag  = true
 
    const darkToggle = ()=>{
     if(darkflag){
-        document.body.style.backgroundColor = "black"
+        document.body.style.backgroundColor = "black";
+        darkbtn.innerText = "Dark"
+
         darkflag = false
     } else{
-        document.body.style.backgroundColor = "white"
+        document.body.style.backgroundColor = "white";
+        darkbtn.innerText = "Light"
         darkflag = true
-
     }
    }
 
@@ -79,13 +81,13 @@ export function Covid() {
                         {/* <a href="/" className="btn dark" onClick={() => toggleClick()}>Dark</a> */}
                         {/* <a href="/" theme={theme === "dark" ? "dark-theme"  : "light-theme"}> Dark</a> */}
 
-                        <button className="darkbtn">Dark</button>
+                        <button className="darkbtn "  onClick={darkToggle}>Dark</button>
 
                         <h2 className="covidTitle"> Covid Tracker</h2>
                         <input type="text" value={search} onChange={
                             (e) => setSearchBar(e.target.value)
                         } />
-                        <button className="btnclick" onClick={darkToggle}>Go</button>
+                        <button className="btnclick">Go</button>
                     </div>
 
 

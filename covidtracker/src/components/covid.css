@@ -3,7 +3,7 @@
     --main-title: #752e83;
     --thead-clr : #d3a1dd;
     --light-purple: #eadded;
-    --title:#5a046a;
+    --title:#cc07f1;
     --black: #0000;
 }
 
@@ -65,7 +65,15 @@ input[type="text"] {
     width: 50%;
     height: 36px;
     border: 1px solid purple;
+    padding: 0px 5px;
 
+}
+button.darkbtn {
+    float: right;
+    background-color: purple;
+    padding: 5px;
+    margin: 0px 8px;
+    color: white;
 }
 .table-res{
   max-height: 700px;
